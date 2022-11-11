@@ -1,20 +1,19 @@
-@import'./utils/variables';
-@import'./base/common';
-@import'./base/reset';
+@import "./utils/variables";
+@import "./base/common";
+@import "./base/reset";
 
-@import'./components/container';
-@import'./components/modal';
+@import "./components/container";
+@import "./components/logo";
+@import "./components/modal";
+@import "./components/mob-menu.scss";
 
-@import'./layouts/header';
-@import'./layouts/hero';
-@import'./utils/hidden';
-@import'./layouts/personality';
-@import'./layouts/product';
-@import'./layouts/team';
-@import'./layouts/customers';
-@import'./layouts/footer';
-@import'./layouts/button-section';
-@import'./layouts/work-section';
-
-
-
+@import "./layouts/header";
+@import "./layouts/hero";
+@import "./utils/hidden";
+@import "./layouts/personality";
+@import "./layouts/product";
+@import "./layouts/team";
+@import "./layouts/customers";
+@import "./layouts/footer";
+@import "./layouts/button-section";
+@import "./layouts/work-section";

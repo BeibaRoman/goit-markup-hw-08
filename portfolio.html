@@ -24,20 +24,28 @@
   </head>
   <body>
     <header class="header border">
-      <div class="container header-container">
+      <div class="container header__container">
+        <a
+          class="logo header__logo logo--dark link"
+          href="./index.html"
+          lang="en"
+          ><span class="logo__accent">Web</span>Studio</a
+        >
+        <button type="button" class="header__mob-menu-open" data-menu-open>
+          <svg class="header__btn-icon" width="40" height="40">
+            <use href="./images/symbol-defs.svg#open-menu"></use>
+          </svg>
+        </button>
+
         <nav class="navigation">
-          <a
-            class="logo navigation__logo logo--dark link"
-            href="./index.html"
-            lang="en"
-            ><span class="logo__accent">Web</span>Studio</a
-          >
           <ul class="menu list">
             <li class="menu__item">
-              <a class="menu__link link " href="./index.html">Студія</a>
+              <a class="menu__link link" href="./index.html">Студія</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link link current" href="./portfolio.html">Портфоліо</a>
+              <a class="menu__link link current" href="./portfolio.html"
+                >Портфоліо</a
+              >
             </li>
             <li class="menu__item">
               <a class="menu__link link" href="">Контакти</a>
@@ -67,231 +75,663 @@
     <main>
       <section class="project section">
         <div class="container">
-          <h1 class="visually-hidden">Наші проекти</h1>
-          <ul class="project-list list">
-            <li class="project-item">
-              <button class="project-button current-button" type="button">
+          <h1 class="project__title visually-hidden">Наші проекти</h1>
+          <ul class="project__list list">
+            <li class="project__item">
+              <button class="project__button current--button" type="button">
                 Усі
               </button>
             </li>
-            <li class="project-item">
-              <button class="project-button" type="button">Веб-сайти</button>
+            <li class="project__item">
+              <button class="project__button" type="button">Веб-сайти</button>
             </li>
-            <li class="project-item">
-              <button class="project-button" type="button">Додатки</button>
+            <li class="project__item">
+              <button class="project__button" type="button">Додатки</button>
             </li>
-            <li class="project-item">
-              <button class="project-button" type="button">Дизайн</button>
+            <li class="project__item">
+              <button class="project__button" type="button">Дизайн</button>
             </li>
-            <li class="project-item">
-              <button class="project-button" type="button">Маркетинг</button>
+            <li class="project__item">
+              <button class="project__button" type="button">Маркетинг</button>
             </li>
           </ul>
           <ul class="work-list list">
-            <li class="work-item">
-              <a class="work-link link" href="">
-                <div class="work-wrap">
-                  <img
-                    src="./images/project1.jpg"
-                    alt="web sites"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="work-wrap-text">
+            <li class="work-list__item">
+              <a class="work-list__link link" href="">
+                <div class="work-list__wrap">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/work-1/desktop/work-1-370.webp 370w,
+                        ./images/portfolio/work-1/desktop/work-1-740.webp 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-1/desktop/work-1-370.jpg 370w,
+                        ./images/portfolio/work-1/desktop/work-1-740.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-1/tablet/work-1-354.webp 354w,
+                        ./images/portfolio/work-1/tablet/work-1-708.webp 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-1/tablet/work-1-354.jpg 354w,
+                        ./images/portfolio/work-1/tablet/work-1-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-1/mobile/work-1-450.webp 450w,
+                        ./images/portfolio/work-1/mobile/work-1-900.webp 900w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-1/mobile/work-1-450.jpg 450w,
+                        ./images/portfolio/work-1/mobile/work-1-900.jpg 900w
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/work-1/mobile/work-1-450.jpg 450w"
+                      alt="Дизайнер UI"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
+                  <p class="work-list__wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
 
-                <div class="work-description">
-                  <h2 class="work-title">Технокряк</h2>
-                  <p class="work-text">Веб-сайт</p>
+                <div class="work-list__description">
+                  <h2 class="work-list__title">Технокряк</h2>
+                  <p class="work-list__text">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="work-item">
-              <a class="work-link link" href="">
-                <div class="work-wrap">
-                  <img
-                    src="./images/project2.jpg"
-                    alt="design"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="work-wrap-text">
+            <li class="work-list__item">
+              <a class="work-list__link link" href="">
+                <div class="work-list__wrap">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/work-2/desktop/work-2-370.webp 370w,
+                        ./images/portfolio/work-2/desktop/work-2-740.webp 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-2/desktop/work-2-370.jpg 370w,
+                        ./images/portfolio/work-2/desktop/work-2-740.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-2/tablet/work-2-354.webp 354w,
+                        ./images/portfolio/work-2/tablet/work-2-708.webp 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-2/tablet/work-2-354.jpg 354w,
+                        ./images/portfolio/work-2/tablet/work-2-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-2/mobile/work-2-450.webp 450w,
+                        ./images/portfolio/work-2/mobile/work-2-900.webp 900w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-2/mobile/work-2-450.jpg 450w,
+                        ./images/portfolio/work-2/mobile/work-2-900.jpg 900w
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/work-2/mobile/work-2-450.jpg 450w"
+                      alt="Дизайнер UI"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
+                  <p class="work-list__wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
-                <div class="work-description">
-                  <h2 class="work-title">
+                <div class="work-list__description">
+                  <h2 class="work-list__title">
                     Постер<span lang="en"> New Orlean vs Golden Star</span>
                   </h2>
-                  <p class="work-text">Дизайн</p>
+                  <p class="work-list__text">Дизайн</p>
                 </div>
               </a>
             </li>
-            <li class="work-item">
-              <a class="work-link link" href="">
-                <div class="work-wrap">
-                  <img
-                    src="./images/project3.jpg"
-                    alt="application"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="work-wrap-text">
+            <li class="work-list__item">
+              <a class="work-list__link link" href="">
+                <div class="work-list__wrap">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/work-3/desktop/work-3-370.webp 370w,
+                        ./images/portfolio/work-3/desktop/work-3-740.webp 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-3/desktop/work-3-370.jpg 370w,
+                        ./images/portfolio/work-3/desktop/work-3-740.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-3/tablet/work-3-354.webp 354w,
+                        ./images/portfolio/work-3/tablet/work-3-708.webp 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-3/tablet/work-3-354.jpg 354w,
+                        ./images/portfolio/work-3/tablet/work-3-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-3/mobile/work-3-450.webp 450w,
+                        ./images/portfolio/work-3/mobile/work-3-900.webp 900w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-3/mobile/work-3-450.jpg 450w,
+                        ./images/portfolio/work-3/mobile/work-3-900.jpg 900w
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/work-3/mobile/work-3-450.jpg 450w"
+                      alt="Дизайнер UI"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
+                  <p class="work-list__wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
 
-                <div class="work-description">
-                  <h2 class="work-title">
+                <div class="work-list__description">
+                  <h2 class="work-list__title">
                     Ресторан<span lang="en"> Seafood</span>
                   </h2>
-                  <p class="work-text">Додаток</p>
+                  <p class="work-list__text">Додаток</p>
                 </div>
               </a>
             </li>
-            <li class="work-item">
-              <a class="work-link link" href="">
-                <div class="work-wrap">
-                  <img
-                    src="./images/project4.jpg"
-                    alt="marketing"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="work-wrap-text">
+            <li class="work-list__item">
+              <a class="work-list__link link" href="">
+                <div class="work-list__wrap">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/work-4/desktop/work-4-370.webp 370w,
+                        ./images/portfolio/work-4/desktop/work-4-740.webp 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-4/desktop/work-4-370.jpg 370w,
+                        ./images/portfolio/work-4/desktop/work-4-740.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-4/tablet/work-4-354.webp 354w,
+                        ./images/portfolio/work-4/tablet/work-4-708.webp 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-4/tablet/work-4-354.jpg 354w,
+                        ./images/portfolio/work-4/tablet/work-4-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-4/mobile/work-4-450.webp 450w,
+                        ./images/portfolio/work-4/mobile/work-4-900.webp 900w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-4/mobile/work-4-450.jpg 450w,
+                        ./images/portfolio/work-4/mobile/work-4-900.jpg 900w
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/work-4/mobile/work-4-450.jpg 450w"
+                      alt="Дизайнер UI"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
+                  <p class="work-list__wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
-
-                <div class="work-description">
-                  <h2 class="work-title">
+                <div class="work-list__description">
+                  <h2 class="work-list__title">
                     Проєкт<span lang="en"> Prime</span>
                   </h2>
-                  <p class="work-text">Маркетинг</p>
+                  <p class="work-list__text">Маркетинг</p>
                 </div>
               </a>
             </li>
-            <li class="work-item">
-              <a class="work-link link" href="">
-                <div class="work-wrap">
-                  <img
-                    src="./images/project5.jpg"
-                    alt="application"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="work-wrap-text">
+            <li class="work-list__item">
+              <a class="work-list__link link" href="">
+                <div class="work-list__wrap">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/work-5/desktop/work-5-370.webp 370w,
+                        ./images/portfolio/work-5/desktop/work-5-740.webp 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-5/desktop/work-5-370.jpg 370w,
+                        ./images/portfolio/work-5/desktop/work-5-740.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-5/tablet/work-5-354.webp 354w,
+                        ./images/portfolio/work-5/tablet/work-5-708.webp 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-5/tablet/work-5-354.jpg 354w,
+                        ./images/portfolio/work-5/tablet/work-5-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-5/mobile/work-5-450.webp 450w,
+                        ./images/portfolio/work-5/mobile/work-5-900.webp 900w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-5/mobile/work-5-450.jpg 450w,
+                        ./images/portfolio/work-5/mobile/work-5-900.jpg 900w
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/work-5/mobile/work-5-450.jpg 450w"
+                      alt="Дизайнер UI"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
+                  <p class="work-list__wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
 
-                <div class="work-description">
-                  <h2 class="work-title">
+                <div class="work-list__description">
+                  <h2 class="work-list__title">
                     Проєкт<span lang="en"> Boxes</span>
                   </h2>
-                  <p class="work-text">Додаток</p>
+                  <p class="work-list__text">Додаток</p>
                 </div>
               </a>
             </li>
-            <li class="work-item">
-              <a class="work-link link" href="">
-                <div class="work-wrap">
-                  <img
-                    src="./images/project6.jpg"
-                    alt="web sites"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="work-wrap-text">
+            <li class="work-list__item">
+              <a class="work-list__link link" href="">
+                <div class="work-list__wrap">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/work-6/desktop/work-6-370.webp 370w,
+                        ./images/portfolio/work-6/desktop/work-6-740.webp 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-6/desktop/work-6-370.jpg 370w,
+                        ./images/portfolio/work-6/desktop/work-6-740.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-6/tablet/work-6-354.webp 354w,
+                        ./images/portfolio/work-6/tablet/work-6-708.webp 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-6/tablet/work-6-354.jpg 354w,
+                        ./images/portfolio/work-6/tablet/work-6-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-6/mobile/work-6-450.webp 450w,
+                        ./images/portfolio/work-6/mobile/work-6-900.webp 900w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-6/mobile/work-6-450.jpg 450w,
+                        ./images/portfolio/work-6/mobile/work-6-900.jpg 900w
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/work-6/mobile/work-6-450.jpg 450w"
+                      alt="Дизайнер UI"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
+                  <p class="work-list__wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
 
-                <div class="work-description">
-                  <h2 class="work-title">Inspiration has no Borders</h2>
-                  <p class="work-text">Веб-сайт</p>
+                <div class="work-list__description">
+                  <h2 class="work-list__title">Inspiration has no Borders</h2>
+                  <p class="work-list__text">Веб-сайт</p>
                 </div>
               </a>
             </li>
-            <li class="project-item">
-              <a class="work-link link" href="">
-                <div class="work-wrap">
-                  <img
-                    src="./images/project7.jpg"
-                    alt="design"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="work-wrap-text">
+            <li class="work-list__item">
+              <a class="work-list__link link" href="">
+                <div class="work-list__wrap">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/work-7/desktop/work-7-370.webp 370w,
+                        ./images/portfolio/work-7/desktop/work-7-740.webp 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-7/desktop/work-7-370.jpg 370w,
+                        ./images/portfolio/work-7/desktop/work-7-740.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-7/tablet/work-7-354.webp 354w,
+                        ./images/portfolio/work-7/tablet/work-7-708.webp 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-7/tablet/work-7-354.jpg 354w,
+                        ./images/portfolio/work-7/tablet/work-7-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-7/mobile/work-7-450.webp 450w,
+                        ./images/portfolio/work-7/mobile/work-7-900.webp 900w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-7/mobile/work-7-450.jpg 450w,
+                        ./images/portfolio/work-7/mobile/work-7-900.jpg 900w
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/work-7/mobile/work-7-450.jpg 450w"
+                      alt="Дизайнер UI"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
+                  <p class="work-list__wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
 
-                <div class="work-description">
-                  <h2 class="work-title">
+                <div class="work-list__description">
+                  <h2 class="work-list__title">
                     Видання<span lang="en"> Limited Edition</span>
                   </h2>
-                  <p class="work-text">Дизайн</p>
+                  <p class="work-list__text">Дизайн</p>
                 </div>
               </a>
             </li>
-            <li class="work-item">
-              <a class="work-link link" href="">
-                <div class="work-wrap">
-                  <img
-                    src="./images/project8.jpg"
-                    alt="marketing"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="work-wrap-text">
+            <li class="work-list__item">
+              <a class="work-list__link link" href="">
+                <div class="work-list__wrap">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/work-8/desktop/work-8-370.webp 370w,
+                        ./images/portfolio/work-8/desktop/work-8-740.webp 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-8/desktop/work-8-370.jpg 370w,
+                        ./images/portfolio/work-8/desktop/work-8-740.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-8/tablet/work-8-354.webp 354w,
+                        ./images/portfolio/work-8/tablet/work-8-708.webp 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-8/tablet/work-8-354.jpg 354w,
+                        ./images/portfolio/work-8/tablet/work-8-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-8/mobile/work-8-450.webp 450w,
+                        ./images/portfolio/work-8/mobile/work-8-900.webp 900w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-8/mobile/work-8-450.jpg 450w,
+                        ./images/portfolio/work-8/mobile/work-8-900.jpg 900w
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/work-8/mobile/work-8-450.jpg 450w"
+                      alt="Дизайнер UI"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
+                  <p class="work-list__wrap-text">
+                    Ресурс пропонує комплексні пропозиції з різним рівнем
+                    функціоналу та сервісів. Все це дозволить відвідувачу
+                    отримати вичерпні відомості про компанію чи приватну особу.
+                  </p>
+                </div>
+                <div class="work-list__description">
+                  <h2 class="work-list__title">
+                    Проєкт<span lang="en"> LAB</span>
+                  </h2>
+                  <p class="work-list__text">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="work-list__item">
+              <a class="work-list__link link" href="">
+                <div class="work-list__wrap">
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/work-9/desktop/work-9-370.webp 370w,
+                        ./images/portfolio/work-9/desktop/work-9-740.webp 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-9/desktop/work-9-370.jpg 370w,
+                        ./images/portfolio/work-9/desktop/work-9-740.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-9/tablet/work-9-354.webp 354w,
+                        ./images/portfolio/work-9/tablet/work-9-708.webp 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-9/tablet/work-9-354.jpg 354w,
+                        ./images/portfolio/work-9/tablet/work-9-708.jpg 708w
+                      "
+                      media="(min-width: 768px)"
+                      type="image/jpg"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-9/mobile/work-9-450.webp 450w,
+                        ./images/portfolio/work-9/mobile/work-9-900.webp 900w
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/work-9/mobile/work-9-450.jpg 450w,
+                        ./images/portfolio/work-9/mobile/work-9-900.jpg 900w
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      class="work-list__img"
+                      src="./images/portfolio/work-9/mobile/work-9-450.jpg 450w"
+                      alt="Дизайнер UI"
+                      sizes="(min-width: 1200px) 25vw, (min-width: 768px) 50vw, 100vw"
+                    />
+                  </picture>
+                  <p class="work-list__wrap-text">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
                     отримати вичерпні відомості про компанію чи приватну особу.
                   </p>
                 </div>
 
-                <div class="work-description">
-                  <h2 class="work-title">Проєкт<span lang="en"> LAB</span></h2>
-                  <p class="work-text">Маркетинг</p>
-                </div>
-              </a>
-            </li>
-            <li class="work-item">
-              <a class="work-link link" href="">
-                <div class="work-wrap">
-                  <img
-                    src="./images/project9.jpg"
-                    alt="application"
-                    width="370"
-                    height="294"
-                  />
-                  <p class="work-wrap-text">
-                    Ресурс пропонує комплексні пропозиції з різним рівнем
-                    функціоналу та сервісів. Все це дозволить відвідувачу
-                    отримати вичерпні відомості про компанію чи приватну особу.
-                  </p>
-                </div>
-
-                <div class="work-description">
-                  <h2 class="work-title">Growing Business</h2>
-                  <p class="work-text">Додаток</p>
+                <div class="work-list__description">
+                  <h2 class="work-list__title">Growing Business</h2>
+                  <p class="work-list__text">Додаток</p>
                 </div>
               </a>
             </li>
@@ -302,73 +742,75 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__info">
-          <div class="footer__contacts">
-            <a
-              class="logo logo--light footer-logo-resizing link"
-              href="./index.html"
-              lang="en"
-              ><span class="logo__accent">Web</span>Studio</a
-            >
-            <address class="adress">
-              <ul class="adress__list list">
-                <li class="adress__item">
-                  <a
-                    class="adress__location link"
-                    href="https://goo.gl/maps/TeZ3aebKZKyq2pPy8"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >м. Київ, пр-т Лесі Українки, 26</a
-                  >
+          <div class="footer__contact-wrap">
+            <div class="footer__contacts">
+              <a
+                class="logo logo--light footer-logo--resizing link"
+                href="./index.html"
+                lang="en"
+                ><span class="logo__accent">Web</span>Studio</a
+              >
+              <address class="adress">
+                <ul class="adress__list list">
+                  <li class="adress__item">
+                    <a
+                      class="adress__location link"
+                      href="https://goo.gl/maps/TeZ3aebKZKyq2pPy8"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >м. Київ, пр-т Лесі Українки, 26</a
+                    >
+                  </li>
+                  <li class="adress__item mail">
+                    <a
+                      class="adress__contact link"
+                      href="mailto:info@devstudio.com"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                  <li class="adress__item">
+                    <a class="adress__contact link" href="tel:+380961111111"
+                      >+38 096 111 11 11</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+            <div class="social-company">
+              <h2 class="social-company__title company-title--resizing">
+                приєднуйтесь
+              </h2>
+              <ul class="social-networks list">
+                <li class="social-networks__item">
+                  <a class="social-networks__link" href="">
+                    <svg class="social-networks__icon" width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="adress__item mail">
-                  <a
-                    class="adress__contact link"
-                    href="mailto:info@devstudio.com"
-                    >info@devstudio.com</a
-                  >
+                <li class="social-networks__item">
+                  <a class="social-networks__link" href="">
+                    <svg class="social-networks__icon" width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-twitter"></use>
+                    </svg>
+                  </a>
                 </li>
-                <li class="adress__item">
-                  <a class="adress__contact link" href="tel:+380961111111"
-                    >+38 096 111 11 11</a
-                  >
+                <li class="social-networks__item">
+                  <a class="social-networks__link" href="">
+                    <svg class="social-networks__icon" width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social-networks__item">
+                  <a class="social-networks__link" href="">
+                    <svg class="social-networks__icon" width="20" height="20">
+                      <use href="./images/symbol-defs.svg#icon-linkedin"></use>
+                    </svg>
+                  </a>
                 </li>
               </ul>
-            </address>
-          </div>
-          <div class="social-company">
-            <h2 class="social-company__title company-title--resizing">
-              приєднуйтесь
-            </h2>
-            <ul class="social-networks list">
-              <li class="social-networks__item">
-                <a class="social-networks__link" href="">
-                  <svg class="social-networks__icon" width="20" height="20">
-                    <use href="./images/symbol-defs.svg#icon-instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-networks__item">
-                <a class="social-networks__link" href="">
-                  <svg class="social-networks__icon" width="20" height="20">
-                    <use href="./images/symbol-defs.svg#icon-twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-networks__item">
-                <a class="social-networks__link" href="">
-                  <svg class="social-networks__icon" width="20" height="20">
-                    <use href="./images/symbol-defs.svg#icon-facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-networks__item">
-                <a class="social-networks__link" href="">
-                  <svg class="social-networks__icon" width="20" height="20">
-                    <use href="./images/symbol-defs.svg#icon-linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+            </div>
           </div>
           <div class="fotter-input-wrap">
             <form class="online__form">
@@ -392,5 +834,84 @@
         </div>
       </div>
     </footer>
+
+    <div class="mobile-menu is is-hidden" data-menu>
+      <div class="mobile-top">
+        <button type="button" class="mobile-menu__close">
+          <svg class="mobile-menu__icon" width="40" height="40" data-menu-close>
+            <use href="./images/symbol-defs.svg#close-menu"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu__list list">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link link" href="./index.html">Студія</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link link accent" href="./portfolio.html"
+              >Портфоліо</a
+            >
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link link" href="">Контакти</a>
+          </li>
+        </ul>
+      </div>
+      <div class="mobile-bottom">
+        <ul class="mobile-contact list">
+          <li class="mobile-contact__item">
+            <a
+              class="mobile-contact__link link"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+          <li class="mobile-contact__item">
+            <a class="mobile-contact__link link" href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-social list">
+          <li class="mobile-social__item">
+            <a
+              class="mobile-social__link link"
+              href="https://www.instagram.com/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Instagram</a
+            >
+          </li>
+          <li class="mobile-social__item">
+            <a
+              class="mobile-social__link link"
+              href="https://twitter.com/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Twitter</a
+            >
+          </li>
+          <li class="mobile-social__item">
+            <a
+              class="mobile-social__link link"
+              href="https://www.facebook.com/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >Facebook</a
+            >
+          </li>
+          <li class="mobile-social__item">
+            <a
+              class="mobile-social__link link"
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./js/menu.js"></script>
   </body>
 </html>
